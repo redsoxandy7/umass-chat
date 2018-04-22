@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href={{ url_for('static',filename='style.css') }}>
+        <title>Umessage</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar bg-primary">
+            <a href="#" class="display-3 text-white nav-link"><span class="display-2 letter">U</span>message</a>
+            <ul class="nav">
+                <li class="nav-item"><a href={{ url_for('index')}}  class="text-white nav-link">About Us</a></li>
+                <li class="nav-item"><a href="#" class="text-white nav-link">Features</a></li>
+                <li class="nav-item"><a href="#" class="text-white nav-link">Community</a></li>
+                <li class="nav-item"><a href={{ url_for('signup')}} class="text-white  nav-link">SignUp/Sign in</a></li>
+            </ul>
+        </nav>
+            <div class="container-fulid">
+        <div class="jumbotron center">
+            <h1 class="display-4"><span class="display-3 letter">U</span>message!</h1>
+            <p class="lead">Upcoming messaging app created for students within the school to communicate better</p>
+            <hr class="my-4">
+            <p>Sign up and learn more about how it can help you communicate with your classmates.</p>
+            <p class="lead">
+                <a href="#" class="btn btn-primary" role="button">Learn More</a>
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+    </script>
+    </body>
+</html>

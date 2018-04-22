@@ -1,0 +1,24 @@
+Flask
+flask-sqlalchemy
+SQlAlchemy
+flask-login
+flask-bootstrap
+flask-wtf
+flask-session
+werkzeug.security
+sqlalchemy.exc
+psycopg2
+os
+
+https://gist.github.com/alanhamlett/11229056
+https://blog.theodo.fr/2017/03/developping-a-flask-web-app-with-a-postresql-database-making-all-the-possible-errors/
+https://vsupalov.com/flask-sqlalchemy-postgres/
+https://www.youtube.com/watch?v=2dEM-s3mRLE
+https://flask-login.readthedocs.io/en/latest/#installation
+http://flask-sqlalchemy.pocoo.org/2.3/quickstart/
+https://stackoverflow.com/questions/9353822/connecting-postgresql-with-sqlalchemy?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+
+https://pythonspot.com/login-authentication-with-flask/ <----
+https://www.youtube.com/watch?v=8aTnmsDMldY&t=392s <----
+
+source flaskapp/bin/activate
