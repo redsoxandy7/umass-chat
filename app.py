@@ -94,12 +94,7 @@ def signup():
     return render_template('signup.html', form=form)
 
 
-@app.route('/test', methods=['GET', 'POST'])
-def test():
-    return render_template('test.html')
-
-
-@app.route('/chat')
+@app.route('/chat', methods=['GET', 'POST'])
 @login_required
 def chat():
     return render_template('chat.html', name=current_user.username)
@@ -141,20 +136,20 @@ def init_sio(id):
     room = '/' + id
 
     @socketio.on('connect', namespace=room)
-    def test_connect():
+    def on_connect():
         send('client has entered the room: ' + room)
         print('Client connected to ' + room)
 
     @socketio.on('disconnect', namespace=room)
-    def test_disconnect():
+    def on_disconnect():
         print('Client disconnected')
 
     @socketio.on('message', namespace=room)
-    def test_message(msg):
+    def on_message(msg):
         print(room + ' message: ' + msg)
         send(msg, broadcast=True)
 
-    return render_template('test.html')
+    return render_template('chat.html')
 
 
 if __name__ == '__main__':
