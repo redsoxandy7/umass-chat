@@ -130,7 +130,6 @@ def on_leave(data):
     send(username + ' has left the room.', room=room)
 
 
-@login_required
 @app.route('/rooms/<id>', methods=['GET', 'POST'])
 def init_sio(id):
     print(id)
