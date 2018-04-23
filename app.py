@@ -94,10 +94,10 @@ def signup():
     return render_template('signup.html', form=form)
 
 
-@app.route('/chat', methods=['GET', 'POST'])
-@login_required
-def chat():
-    return render_template('chat.html', name=current_user.username)
+# @app.route('/chat', methods=['GET', 'POST'])
+# @login_required
+# def chat():
+#     return render_template('chat.html', name=current_user.username)
 
 
 @app.route('/logout')
