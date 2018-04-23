@@ -8,8 +8,7 @@ from flask_session import Session
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
-#from sqlalchemy.exc import IntegrityError
-import psycopg2
+from sqlalchemy.exc import IntegrityError
 import os
 import config
 
@@ -87,7 +86,7 @@ def signup():
             db.session.add(new_user)
             db.session.commit()
             return redirect(url_for('login'))
-        except:
+        except IntegrityError:
             flash('Username or Email already exists!')
             return redirect(url_for('signup'))
 
@@ -159,5 +158,5 @@ def init_sio(id):
 
 if __name__ == '__main__':
     app.secret_key = os.urandom(12)
-    socketio.run(app)
-    #app.run()
+    socketio.run(app, host="0.0.0.0", port=80)
+    #app.run(host="0.0.0.0", port=80)

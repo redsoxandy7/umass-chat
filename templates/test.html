@@ -7,7 +7,7 @@
 <body>
 <script type="text/javascript">
 $(document).ready(function() {
-	var sio = io('http://127.0.0.1:5000/'+location.pathname.split('/')[2]);
+	var sio = io('http://' + location.hostname + '/' + location.pathname.split('/')[2])
 	sio.on('connect', function() {
 		sio.send('{{session['username']}} has connected');
 	});
@@ -32,3 +32,4 @@ $(document).ready(function() {
 <button id="sendbutton">Send</button>
 </body>
 </html>
+
