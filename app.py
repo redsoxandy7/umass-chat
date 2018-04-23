@@ -137,7 +137,7 @@ def init_sio(id):
 
     @socketio.on('connect', namespace=room)
     def on_connect():
-        send('client has entered the room: ' + room)
+        send(session['username'] + ' has entered the room: ' + room)
         print('Client connected to ' + room)
 
     @socketio.on('disconnect', namespace=room)
