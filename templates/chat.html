@@ -9,7 +9,7 @@
 $(document).ready(function() {
 	var sio = io('http://' + location.hostname + '/' + location.pathname.split('/')[2])
 	sio.on('connect', function() {
-		//sio.send('{{session['username']}} has connected');
+		sio.send('{{session['username']}} has connected');
 	});
 	sio.on('message', function(msg) {
 		$("#messages").append('<li>'+msg+'</li>');
