@@ -147,7 +147,7 @@ def init_sio(id):
     @socketio.on('message', namespace=room)
     def on_message(msg):
         print(room + ' message: ' + msg)
-        send(msg, broadcast=True)
+        send(session['username'] + ' : ' + msg, broadcast=True)
 
     return render_template('chat.html')
 
