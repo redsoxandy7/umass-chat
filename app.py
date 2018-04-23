@@ -52,7 +52,7 @@ class LoginForm(FlaskForm):
 class RegisterForm(FlaskForm):
     username = StringField('username', validators=[InputRequired(), Length(min=4, max=80)])
     email = StringField('email', validators=[InputRequired(), Email(message='invalid email'), Length(max=80)])
-    password = StringField('password', validators=[InputRequired(), Length(min=8, max=80)])
+    password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
 
 
 @app.route('/')
