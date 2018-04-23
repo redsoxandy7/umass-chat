@@ -8,7 +8,7 @@ from flask_session import Session
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
-from sqlalchemy.exc import IntegrityError
+#from sqlalchemy.exc import IntegrityError
 import psycopg2
 import os
 import config
@@ -87,7 +87,7 @@ def signup():
             db.session.add(new_user)
             db.session.commit()
             return redirect(url_for('login'))
-        except IntegrityError:
+        except:
             flash('Username or Email already exists!')
             return redirect(url_for('signup'))
 

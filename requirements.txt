@@ -22,3 +22,5 @@ https://pythonspot.com/login-authentication-with-flask/ <----
 https://www.youtube.com/watch?v=8aTnmsDMldY&t=392s <----
 
 source flaskapp/bin/activate
+source /var/www/chat.umass.io/venv/python34/bin/activate
+https://gist.github.com/niranjv/f80fc1f488afc49845e2ff3d5df7f83b
