@@ -69,7 +69,7 @@ def login():
             if check_password_hash(user.password, form.password.data):
                 login_user(user, remember=form.remember)
                 session['username'] = form.username.data
-                return redirect(url_for('index'))
+                return redirect(url_for('chat'))
 
         flash('Invalid Username or Password')
         return redirect(url_for('login'))
