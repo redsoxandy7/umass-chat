@@ -154,5 +154,5 @@ def init_sio(id):
 
 if __name__ == '__main__':
     app.secret_key = os.urandom(12)
-    socketio.run(app, host="0.0.0.0", port=80)
+    exec(config.app_route['public'])
     #app.run(host="0.0.0.0", port=80)
