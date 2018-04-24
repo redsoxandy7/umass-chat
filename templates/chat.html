@@ -1,7 +1,27 @@
-<html>
-<head>
-<title>Chat Room</title>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href={{ url_for('static',filename='style.css') }}>
+        <title>Umessage</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar bg-primary">
+            <a href="#" class="display-3 text-white nav-link"><span class="display-2 letter">U</span>message</a>
+            <ul class="nav">
+                <li class="nav-item"><a href={{ url_for('index')}}  class="text-white nav-link">About Us</a></li>
+                <li class="nav-item"><a href="#" class="text-white nav-link">Features</a></li>
+                <li class="nav-item"><a href="#" class="text-white nav-link">Community</a></li>
+                <li class="nav-item"><a href={{ url_for('signup')}} class="text-white  nav-link">Signup</a></li>
+                <li class="nav-item"><a href={{ url_for('login')}} class="text-white  nav-link">Login</a></li>
+
+            </ul>
+        </nav>
+            <div class="container-fulid">
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
