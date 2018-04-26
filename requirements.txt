@@ -1,5 +1,8 @@
+wtforms
+werkzeug
 Flask
 flask-sqlalchemy
+flask-socketio
 SQlAlchemy
 flask-login
 flask-bootstrap

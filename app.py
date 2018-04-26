@@ -1,4 +1,4 @@
-from flask import Flask, abort, flash, request, render_template, redirect, session, url_for, request
+from flask import Flask, flash, render_template, redirect, session, url_for, request
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField
@@ -155,4 +155,3 @@ def init_sio(id):
 if __name__ == '__main__':
     app.secret_key = os.urandom(12)
     exec(config.app_route['public'])
-    #app.run(host="0.0.0.0", port=80)
