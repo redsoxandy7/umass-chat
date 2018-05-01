@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href={{ url_for('static',filename='style.css') }}>
@@ -9,23 +10,52 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
+
+
+
         <nav class="navbar bg-primary">
             <a href="#" class="display-3 text-white nav-link"><span class="display-2 letter">U</span>message</a>
             <ul class="nav">
-                <li class="nav-item"><a href={{ url_for('index')}}  class="text-white nav-link">Home</a></li>
+                <li class="nav-item"><a href={{ url_for('index')}}  class="text-white nav-link">About Us</a></li>
+                <li class="nav-item"><a href={{ url_for('features')}} class="text-white nav-link">Features</a></li>
+                <li class="nav-item"><a href="https://www.umb.edu/" class="text-white nav-link">Community</a></li>
                 <li class="nav-item"><a href={{ url_for('signup')}} class="text-white  nav-link">Signup</a></li>
                 <li class="nav-item"><a href={{ url_for('login')}} class="text-white  nav-link">Login</a></li>
 
             </ul>
         </nav>
-            <div class="chat-container">
-			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+
+<br>
+<div class="row">
+
+
+        <div class="Friend">
+    <H2>Online Friends</H2>
+            <img src="">
+            <br>
+
+            <a href="http://ec2-52-201-145-51.compute-1.amazonaws.com/rooms/anyroom"> Room 1 </a>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+        </div>
+
+
+
+
+
+
+            <div class="chat-container" style="overflow-y: scroll; height: 550px">
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-</head>
-<body>
+
+
 <script type="text/javascript">
 $(document).ready(function() {
-	var sio = io('http://' + location.hostname + '/' + location.pathname.split('/')[2])
+    var sio = io('http://' + location.hostname + '/' + location.pathname.split('/')[2])
 	sio.on('connect', function() {
 		sio.send('{{session['username']}} has connected');
 	});
@@ -47,9 +77,50 @@ $(document).ready(function() {
 </script>
 
 
+
+
+<div class="message">
 <ul id="messages"></ul>
+</div>
+
+  <div class="myMessage">
 <input type="text" id="myMessage">
+  </div>
+
+
+ <div class="sendbutton">
 <button id="sendbutton">Send</button>
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div class="link">
+    <H1>Chat Rooms</H1>
+    <a href="http://ec2-52-201-145-51.compute-1.amazonaws.com/rooms/anyroom"> Create New Session </a>
+    <br>
+    <h3> Rooms Available</h3>
+    <br>
+    <br>
+    <a href="http://ec2-52-201-145-51.compute-1.amazonaws.com/rooms/anyroom"> Room 1 </a>
+<br>
+    <br>
+    <br>
+    <br>
+
+</div>
+</div>
+
+
+
+
+
 </body>
-</html>
+
+ </html>
 

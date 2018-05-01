@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href={{ url_for('static',filename='style.css') }}>
-        <title>Umessage</title>
+        <title>About Us </Title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
-    <body>
-        <nav class="navbar bg-primary">
+
+<body>
+         <nav class="navbar bg-primary">
             <a href="#" class="display-3 text-white nav-link"><span class="display-2 letter">U</span>message</a>
-            <ul class="nav">
+             <ul class="nav">
                 <li class="nav-item"><a href={{ url_for('index')}}  class="text-white nav-link">About Us</a></li>
                 <li class="nav-item"><a href={{ url_for('features')}} class="text-white nav-link">Features</a></li>
                 <li class="nav-item"><a href="https://www.umb.edu/" class="text-white nav-link">Community</a></li>
                 <li class="nav-item"><a href={{ url_for('signup')}} class="text-white  nav-link">Signup</a></li>
                 <li class="nav-item"><a href={{ url_for('login')}} class="text-white  nav-link">Login</a></li>
-
             </ul>
         </nav>
-            <div class="container-fulid">
-        <div class="jumbotron center">
-            <h1 class="display-4"><span class="display-3 letter">U</span>message!</h1>
-            <p class="lead">Upcoming messaging app created for students within the school to communicate better</p>
-            <hr class="my-4">
-            <p>Sign up and learn more about how it can help you communicate with your classmates.</p>
-            <p><a href="http://ec2-52-201-145-51.compute-1.amazonaws.com/rooms/Capstone">Try Me</a></p>
-            <p class="lead">
-                <a href="#" class="btn btn-primary" role="button">Learn More</a>
-            </p>
+            </div>
+            </div>
         </div>
-    </div>
-    <script type="text/javascript">
 
-    </script>
+		 <div class="container">
+
+      <!-- Introduction Row -->
+      <h1 class="my-4">About Us
+      </h1>
+      <p class="my-4">We are a group of students who attend Umass Boston.  Our goal is to create a chat Application that students can use with other students at the University of Massachusetts Boston.  We want to give students the opportunity to be able to do any type of work that involves collabration to instantly login with there Umass Boston credentials and be able to chat and work together, without the hassle of using a 3rd party application.   </p>
+
+      <!-- Team Members Row -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="my-4">Group 4 IT485 Capstone</h2>
+
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">© 2018 University of Massachusetts Boston
+
+100 William T. Morrissey Blvd. Boston, MA 02125-3393 | Tel: 617.287.5000</p>
+      </div>
+      <!-- /.container -->
+    </footer>
     </body>
 </html>

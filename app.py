@@ -59,6 +59,14 @@ class RegisterForm(FlaskForm):
 def index():
     return render_template('index.html')
 
+@app.route('/features')
+def features():
+    return render_template('features.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -137,7 +145,7 @@ def init_sio(id):
 
     @socketio.on('connect', namespace=room)
     def on_connect():
-        send(session['username'] + ' has entered the room: ' + room)
+        send('You have entered: ' + room)
         print('Client connected to ' + room)
 
     @socketio.on('disconnect', namespace=room)
@@ -147,7 +155,7 @@ def init_sio(id):
     @socketio.on('message', namespace=room)
     def on_message(msg):
         print(room + ' message: ' + msg)
-        send(session['username'] + ' : ' + msg, broadcast=True)
+        send(session['username'] + ': ' + msg, broadcast=True)
 
     return render_template('chat.html')
 
