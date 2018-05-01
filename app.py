@@ -59,9 +59,11 @@ class RegisterForm(FlaskForm):
 def index():
     return render_template('index.html')
 
+
 @app.route('/features')
 def features():
     return render_template('features.html')
+
 
 @app.route('/about')
 def about():
