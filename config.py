@@ -1,7 +1,4 @@
-credentials = {
-    'username': 'postgres',
-    'password': 'password'
-}
+
 
 app_route = {
     'private': 'socketio.run(app)',
